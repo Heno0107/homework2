@@ -1,0 +1,14 @@
+nav h1 {
+    margin-left: 36px;
+    color: blue;
+    font-size: 48px;
+    text-shadow: blue 0 0 12px;
+}
+
+nav {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: black 0 0 12px;
+}

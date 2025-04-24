@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <!-- React -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!--Babel-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const root = ReactDOM.createRoot(document.getElementById('root'))
+       
+        function Button() {
+            return (
+                <button className = 'learnBtn'>Սկսե՛լ ուսումը</button>
+            )
+        }
+
+        function Nav() {
+            return (
+                <nav>
+                    <div className = 'container navFlex'>
+                        <img src="./images/download.png" alt=""></img>
+
+                    <ul className = 'navList'>
+                        <li><a href="">Դասընթացներ</a></li>
+                        <li><a href="">Առավելություններ</a></li>
+                        <li><a href="">Թրեյներներ</a></li>
+                        <li><a href="">Մեր մասին</a></li>
+                    </ul>
+
+                    <Button />
+
+                    </div>
+                </nav>
+            )
+        }
+
+        function LeftDiv() {
+            return (
+                <div className = 'leftDiv'>
+                    <h2><span>Սովորի՛ր</span> ծրագրավորում</h2>
+                    <h2><span>Դարձի՛ր</span> պահանջված մասնագետ</h2>
+
+                    <p className = 'divP'>Որակյալ ուսուցում, անվճար պրակտիկա, երաշխավորված աշխատանք։</p>
+
+                    <ul className = 'btnFlex'>
+                        <Button />
+                        <p><a href=""><i className="bi bi-play-circle"></i> Տեսանյութ</a></p>
+                    </ul>
+
+                    <ul className = 'btnFlex btnFlex-bottom'>
+                        <li><a href=""><i className="bi bi-facebook"></i></a></li>
+                        <li><a href=""><i className="bi bi-linkedin"></i></a></li>
+                        <li><a href=""><i className="bi bi-instagram"></i></a></li>
+                        <li><a href=""><i className="bi bi-tiktok"></i></a></li>
+                    </ul>
+
+                </div>
+            )
+        }
+
+        function RightDiv() {
+            return (
+                <div className = 'rightDiv'>
+                    <img src="./images/download.1.jpeg" alt=""></img>
+                </div>
+            )
+        }
+
+        function App() {
+            return (
+                <>
+                <Nav />
+                <section className = 'container'>
+                    <LeftDiv />
+                    <RightDiv />
+                </section>
+                </>
+            )
+        }
+
+        root.render(<App />)
+ 
+    </script>
+
+</body>
+</html>
